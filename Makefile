@@ -5,6 +5,7 @@ DEPS = $(wildcard *.sv)
 all: com
 
 com: $(DEPS) 
+	@echo "Compiling" $^
 	$(CC) $(DEPS) $(FLAGS) 
 
 sim:
