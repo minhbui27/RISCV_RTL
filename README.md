@@ -9,3 +9,8 @@ For simulation
 ```
 make sim
 ```
+
+To clean
+```
+make clean
+```

@@ -1,8 +1,16 @@
 CC=vcs
 FLAGS=-full64 -debug_access+r -sverilog
-DEPS = pc.sv imem.sv mux_a.sv mux_b.sv
+DEPS = $(wildcard *.sv)
+
+all: com
+
 com: $(DEPS) 
 	$(CC) $(DEPS) $(FLAGS) 
 
 sim:
 	./simv -gui &
+
+clean:
+	rm inter.vpd 
+	rm -rf DVEfiles
+	rm -rf simv.daidir
