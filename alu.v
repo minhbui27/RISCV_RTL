@@ -12,6 +12,7 @@ begin
 	case (alu_op)
 		4h'0: alu_o = a + b; 
 		4h'1: alu_o = a << b;
+		default: alu_o = 32'h00000;
 	endcase
 end
 
