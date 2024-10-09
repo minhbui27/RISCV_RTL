@@ -18,9 +18,7 @@ endmodule
 // Initializing data memory
 initial
 begin
-	mem[0] = 32'h0000_0000;
-	mem[1] = 32'h0000_0000;
-	for (i=2; i<64; i=i+1)
+	for (i=0; i<64; i=i+1)
 		mem[i] = 32'h0000_0000;
 end
 
