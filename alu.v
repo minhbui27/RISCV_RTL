@@ -10,12 +10,19 @@ module alu(
 always @(*)
 begin
 	case (alu_op)
-		4h'0: alu_o = a + b; 
-		4h'1: alu_o = a << b;
-		default: alu_o = 32'h00000;
+		4b'0000: alu_o = a + b; 
+		4b'0001: alu_o = a ^ b;
+		4b'0010: alu_o = a | b;
+		4b'0011: alu_o = a & b;
+		4b'0100: alu_o = a << b;	// shift left logical
+		4b'0101: alu_o = a >> b;	// shift right logical
+		4b'0110: alu_o = a >>> b;	// shirt right arithmetic
+		4b'0111: alu_o = $signed(a) < $signed(b); // set less than
+		4b'1000: alu_o = a < b;		// set less than unsigned
+		4b'1001: alu_o = a - b;		// subtract
+		default: alu_o = 32'h0000;
 	endcase
 end
 
 endmodule
-
 
