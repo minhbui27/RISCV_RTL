@@ -10,5 +10,9 @@ module main_ctrl (
     output logic [1:0]  sel_wb
 
 );
+	always_comb begin
+			
 
+
+	end
 endmodule
