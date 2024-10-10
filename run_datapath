@@ -1,2 +1,2 @@
-vcs pc.sv -full64 -debug_access+r
+vcs pc.sv dmem.sv -full64 -debug_access+r -sverilog
 

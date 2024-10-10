@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module imem (
     input  logic [31:0] addr_i,
     output logic [31:0] instr_o

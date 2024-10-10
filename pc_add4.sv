@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module pc_add4 (
     input  logic [31:0] pc_o,
     output logic [31:0] pc_pc4
