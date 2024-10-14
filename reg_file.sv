@@ -18,6 +18,10 @@ module reg_file(
                 begin 
                     for (i=0; i<32; i=i+1)
                         register[i] <= 32'h0000_0000;
+                    // a0 = 6
+                    register[32'd10] <= 32'h6;
+                    // a1 = 5
+                    register[32'd11] <= 32'h5;
                 end
         end
     assign	rs1_data = register[rs1_addr];

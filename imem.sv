@@ -9,7 +9,9 @@ module imem (
     logic [31:0] i;
 
     initial begin
-        for (i=0; i < 256; i = i + 1) begin
+        // ADD t0, a0, a1
+        imem[0] = 32'b0000000_01010_01011_000_00101_0110011;
+        for (i=1; i < 256; i = i + 1) begin
             imem[i] = 32'h0;
         end
     end
@@ -17,3 +19,4 @@ module imem (
     // shift right two for byte offset
     assign instr_o = imem[addr_i >> 2];
 endmodule
+
