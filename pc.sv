@@ -7,11 +7,11 @@ module pc (
 	output logic [31:0] pc_o
 );
 
+	// implemented as a buffer
 	always @(posedge clk) begin
 		if (rst) begin
 			pc_o <= 32'h0;
 		end
-		// increment pc by 4 on clock edge
 		else begin
 			pc_o <= pc_i;
 		end
