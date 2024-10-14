@@ -4,3 +4,5 @@ simv.daidir/
 inter.vpd
 DVEfiles/
 ucli.key
+session.inter.vpd.tcl
+.*
