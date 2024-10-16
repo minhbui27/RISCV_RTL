@@ -8,7 +8,8 @@ module main_ctrl (
     output logic        mem_wr,
     output logic        mem_rd,
     output logic [ 2:0] mask,
-    output logic [ 1:0] sel_wb
+    output logic [ 1:0] sel_wb,
+    output logic [ 2:0] br_type
 ); 
 	// for easy field access of the instruction
 	typedef struct packed {
@@ -59,7 +60,7 @@ module main_ctrl (
 				reg_wr = 1;
 				sel_wb = 1;
 				case (inst.funct3)
-					// ADD or SUB
+					// ADD (there is no SUBI) 
 					3'b000: alu_op = 0;
 					// XOR
 					3'b100: alu_op = 4'b0001;
@@ -92,6 +93,19 @@ module main_ctrl (
 				sel_b = 1;	
 				mask = inst.funct3;	
 			end
+			// B types
+			7'b1100011: begin
+				 sel_a = 1;
+				 sel_b = 1;
+				 alu_op = 0;
+			     br_type = inst.funct3;
+			end
+			// J type
+			7'b1101111: begin
+				sel_a = 1;
+				sel_b = 1;
+				alu_op = 0;	
+			end
 			default: begin
 				sel_a = 0;
 				sel_b = 0;
@@ -105,3 +119,4 @@ module main_ctrl (
 		endcase
   end
 endmodule
+

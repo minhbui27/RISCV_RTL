@@ -3,7 +3,7 @@ module sc_tb();
 	// wires
 	logic clk, rst;	
 	// pc wires
-	logic [31:0] pc4, pc_o, inst_tb;
+	logic [31:0] pc4, pc_o, inst_tb, pc_i_tb;
     // reg file wires
     logic reg_wr_tb;
     logic [31:0] wr_data_tb, rs1_data_tb, rs2_data_tb;
@@ -27,6 +27,8 @@ module sc_tb();
     
     // ctrl
     logic [1:0] sel_wb_tb;
+	logic br_en_tb;
+	logic [2:0] br_type_tb;
 	// module instantiations
 	
 	assign rs1_addr_tb = inst_tb[19:15];
@@ -36,7 +38,7 @@ module sc_tb();
 	pc pc(
 		.clk (clk),
 		.rst (rst),
-		.pc_i(pc4),
+		.pc_i(pc_i_tb),
 		.pc_o(pc_o)
 	);
 	
@@ -44,7 +46,13 @@ module sc_tb();
 		.pc_o(pc_o),
 		.pc_pc4(pc4)
 	);
-    
+   	
+	mux2_1 pc_sel (
+		.data1(pc4),
+		.data2(alu_o_tb),
+		.sel(br_en_tb),
+		.mux_out(pc_i_tb)
+	); 
     imem imem_dut(
        .addr_i(pc_o),
        .instr_o(inst_tb) 
@@ -81,9 +89,17 @@ module sc_tb();
         .imm_o(imm_o_tb)
     );
     
+	branch_ctrl branch_ctrl_dut (
+		.br_type (br_type_tb),
+		.op_code (inst_tb[6:0]),
+		.rs1_data (rs1_data_tb),
+		.rs2_data (rs2_data_tb),
+		.br_en (br_en_tb)
+	);
+
     alu alu_dut (
-        .a (mux_a_out),
-        .b (mux_b_out),
+        .a (mux_out_a),
+        .b (mux_out_b),
         .alu_op (alu_op_tb),
         .alu_o (alu_o_tb)
     );
@@ -98,7 +114,6 @@ module sc_tb();
          .dmem_o (dmem_o_tb)
     );
    
-    
     main_ctrl main_ctrl_dut(
         .inst_i (inst_tb),
         .reg_wr (reg_wr_tb),
@@ -108,7 +123,8 @@ module sc_tb();
         .mem_wr (mem_wr_tb),
         .mem_rd (mem_rd_tb),
         .mask (mask_tb),
-        .sel_wb (sel_wb_tb)
+        .sel_wb (sel_wb_tb),
+		.br_type (br_type_tb)
     );
 
     mux4_1 mux_wb_dut (
