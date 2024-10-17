@@ -1,4 +1,7 @@
 `timescale 1ns/1ns
+
+// instructions being tested are listed in the imem
+
 module sc_tb();
 	// wires
 	logic clk, rst;	
@@ -71,8 +74,8 @@ module sc_tb();
     );
         
     mux2_1 mux_a (
-        .data1(pc_o),
-        .data2(rs1_data_tb),
+        .data1(rs1_data_tb),
+        .data2(pc_o),
         .sel(sel_a_tb),
         .mux_out(mux_out_a)
     );
@@ -155,3 +158,4 @@ module sc_tb();
 		$finish;
 	end
 endmodule
+
