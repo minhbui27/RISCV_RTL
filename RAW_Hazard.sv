@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module hazard(
+module RAW_Hazard(
 	input logic write_to_mem,
 	input logic [3:0] Reg_rs,
 	input logic [3:0] Reg_rt,
