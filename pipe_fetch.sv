@@ -1,14 +1,14 @@
 `timescale 1ns/1ns
 
 module pipe_fetch(
-	input logic	 clk,
-	input logic  reset,
-	input logic	 inst_f,
-	input logic	 pc_f,
-	input logic	 pc_plus_4_f,
-	output logic inst_d,
-	output logic pc_d,
-	output logic pc_plus_4_d
+	input logic			clk,
+	input logic			reset,
+	input logic [31:0]	INST_F,
+	input logic	[31:0]	PC_F,
+	input logic	[31:0]	PC4_F,
+	output logic [31:0] INST_D,
+	output logic [31:0] PC_D,
+	output logic [31:0] PC4_D
 );
 
 always_ff @(posedge clk, posedge reset)
