@@ -13,7 +13,7 @@ module pipe_decode(
 	input logic [6:0]	brc_input_D,
 	input logic [31:0]	PC_D,
 	input logic [31:0]	PC4_D,
-	input logic [4:0]	rd_D
+	input logic [4:0]	rd_D,
 
 	output logic [31:0] rs1_data_E,
 	output logic [31:0] rs2_data_E,
@@ -34,15 +34,15 @@ module pipe_decode(
 	input logic [2:0] 	mem_mask_D,
 	input logic	[1:0]	set_wb_D,
 
-	output logic 		reg_wr_D,
-	output logic [2:0]	br_type_D,
-	output logic		sel_a_D,
-	output logic 		sel_b_D,
-	output logic [3:0] 	alu_op_D,
-	output logic		mem_wr_D,
-	output logic 		mem_rd_D,
-	output logic [2:0] 	mem_mask_D,
-	output logic [1:0]	set_wb_D
+	output logic 		reg_wr_E,
+	output logic [2:0]	br_type_E,
+	output logic		sel_a_E,
+	output logic 		sel_b_E,
+	output logic [3:0] 	alu_op_E,
+	output logic		mem_wr_E,
+	output logic 		mem_rd_E,
+	output logic [2:0] 	mem_mask_E,
+	output logic [1:0]	set_wb_E
 );
 
 	// datapath signals
@@ -155,4 +155,3 @@ module pipe_decode(
     end
 
 endmodule
-
