@@ -17,7 +17,7 @@ module pipe_fetch(
 	logic [31:0] PC_buff_d, PC_buff_q;
 	logic [31:0] PC4_buff_d, PC4_buff_q;
 
-	always_ff @(posedge clk or posedge rst) begin
+	always_ff @(posedge clk) begin
 		if (rst) begin
 			INST_buff_q <= 0;
 			PC_buff_q <= 0;
