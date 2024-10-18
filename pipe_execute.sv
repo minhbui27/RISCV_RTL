@@ -79,7 +79,7 @@ module pipe_execute(
 			rd_M		= 0;
 			PC4_M		= 0;
 		end
-		else if (rst) begin
+		else if (flush) begin
 			control_d	 = 0;
 			reg_wr_M	 = 0;
 			mem_wr_M	 = 0;
@@ -98,7 +98,7 @@ module pipe_execute(
 			reg_wr_M 	= control_q.reg_wr;
 			mem_wr_M 	= control_q.mem_wr;
 			mem_rd_M 	= control_q.mem_rd;
-			mem_mask_M	 = control_q.mem_mask;
+			mem_mask_M	= control_q.mem_mask;
 			sel_wb_M 	= control_q.sel_wb;
 
 			control_d.reg_wr	= reg_wr_E;
