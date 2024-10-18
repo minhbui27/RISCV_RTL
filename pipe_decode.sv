@@ -111,7 +111,24 @@ module pipe_decode(
         else if (flush) begin
             // Reset the pipeline stage when flushing
             datapath_d = '0;
-            control_d  = '0;
+			control_d  = '0;
+			
+			rs1_data_E  = 0;
+			rs2_data_E  = 0;
+			imm_o_E     = 0;
+			brc_input_E = 0;
+			PC_E        = 0;
+			PC4_E       = 0;
+			rd_E        = 0;
+			reg_wr_E    = 0;
+			br_type_E   = 0;
+			sel_a_E     = 0;
+			sel_b_E     = 0;
+			alu_op_E    = 0;
+			mem_wr_E    = 0;
+			mem_rd_E    = 0;
+			mem_mask_E  = 0;
+			set_wb_E    = 0;
         end
         else begin
 			// Output assignments from the registered (q) state
