@@ -32,7 +32,7 @@ module pipe_execute(
 );
 
 	// control signals
-	typedef struck packed {
+	typedef struct packed {
 		logic		reg_wr;
 		logic 		mem_wr;
 		logic 		mem_rd;
