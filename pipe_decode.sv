@@ -32,7 +32,7 @@ module pipe_decode(
 	input logic			mem_wr_D,
 	input logic 		mem_rd_D,
 	input logic [2:0] 	mem_mask_D,
-	input logic	[1:0]	set_wb_D,
+	input logic	[1:0]	sel_wb_D,
 
 	output logic 		reg_wr_E,
 	output logic [2:0]	br_type_E,
@@ -42,14 +42,14 @@ module pipe_decode(
 	output logic		mem_wr_E,
 	output logic 		mem_rd_E,
 	output logic [2:0] 	mem_mask_E,
-	output logic [1:0]	set_wb_E,
+	output logic [1:0]	sel_wb_E,
 
 	// hazard unit wires
-	input logic [31:0]	rs1_addr_D,
-	input logic [31:0]	rs2_addr_D,
+	input logic [4:0]	rs1_addr_D,
+	input logic [4:0]	rs2_addr_D,
 
-	output logic [31:0]	rs1_addr_E,
-	output logic [31:0]	rs2_addr_E
+	output logic [4:0]	rs1_addr_E,
+	output logic [4:0]	rs2_addr_E
 
 );
 
@@ -77,7 +77,7 @@ module pipe_decode(
         logic        mem_wr;
         logic        mem_rd;
         logic [2:0]  mem_mask;
-        logic [1:0]  set_wb;
+        logic [1:0]  sel_wb;
     } control_t;
 
     // flip-flops for control signals
@@ -120,7 +120,7 @@ module pipe_decode(
 			mem_wr_E    = 0;
 			mem_rd_E    = 0;
 			mem_mask_E  = 0;
-			set_wb_E    = 0;
+			sel_wb_E    = 0;
 			rs1_addr_E	= 0;
 			rs2_addr_E	= 0;
         if (stall) begin
@@ -153,7 +153,7 @@ module pipe_decode(
 			mem_wr_E    = control_q.mem_wr;
 			mem_rd_E    = control_q.mem_rd;
 			mem_mask_E  = control_q.mem_mask;
-			set_wb_E    = control_q.set_wb;
+			sel_wb_E    = control_q.sel_wb;
 
 			rs1_addr_E	= hazard_q.rs1_addr;
 			rs2_addr_E	= hazard_q.rs2_addr;
@@ -175,7 +175,7 @@ module pipe_decode(
             control_d.mem_wr     = mem_wr_D;
             control_d.mem_rd     = mem_rd_D;
             control_d.mem_mask   = mem_mask_D;
-            control_d.set_wb     = set_wb_D;
+            control_d.sel_wb     = sel_wb_D;
 
 			hazard_d.rs1_addr	 = rs1_addr_D;
 			hazard_d.rs2_addr	 = rs2_addr_D;
