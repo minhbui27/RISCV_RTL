@@ -45,7 +45,7 @@ module pipeline_tb();
 	logic [4:0] rd_W;
 
 	// Forward MUX selectors for E stage RAW hazard
-	logic [1:0] ForwardAE, ForwardBE;
+	logic [1:0] forwardAE, forwardBE;
 	logic [31:0] mux_fw_a, mux_fw_b;
 	// flush and stall signals
 	logic stallF, stallD, flushD, flushE;	
@@ -172,7 +172,7 @@ module pipeline_tb();
 		.data2(mux_wb_out_W),
 		.data3(mux_wb_out_W),
 		.data4(alu_o_M),
-		.sel(ForwardAE),
+		.sel(forwardAE),
 		.mux_o(mux_fw_a)
 	);
 
@@ -181,7 +181,7 @@ module pipeline_tb();
 		.data2(mux_wb_out_W),
 		.data3(mux_wb_out_W),
 		.data4(alu_o_M),
-		.sel(ForwardBE),
+		.sel(forwardBE),
 		.mux_o(mux_fw_b)
 	);
 
@@ -282,7 +282,29 @@ module pipeline_tb();
 	
 
 	//====================================== Hazard Unit ====================================== 
+	hazard_unit hazard_unit_dut (
+		.rs1_D			(inst_D[19:15]),
+		.rs2_D			(inst_D[24:20]),
 	
+		.rd_E			(rd_E),
+		.rd_M			(rd_M),
+		.rd_W			(rd_W),
+		.rs1_E			(rs1_addr_E),
+		.rs2_E			(rs2_addr_E),
+		.reg_wr_M		(reg_wr_M),
+		.reg_wr_W		(reg_wr_W),
+		.br_en_E		(br_en_E),
+		.sel_wb_E		(sel_wb_E),
+	
+		.stallF			(stallF),
+		.stallD			(stallD),
+		.flushE			(flushE),
+		.flushD			(flushD),
+	
+		.forwardAE		(forwardAE),
+		.forwardBE		(forwardBE)
+	
+	);	
 	// create clock
 	initial begin
 		forever begin
