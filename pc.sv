@@ -24,7 +24,7 @@ module pc (
 			pc_o = 0;
 		end	
 		else begin
-			pc_buf_d = pc_in;
+			pc_buf_d = pc_i;
 			pc_o = pc_buf_q;
 		end
 	end

@@ -42,7 +42,15 @@ module pipe_decode(
 	output logic		mem_wr_E,
 	output logic 		mem_rd_E,
 	output logic [2:0] 	mem_mask_E,
-	output logic [1:0]	set_wb_E
+	output logic [1:0]	set_wb_E,
+
+	// hazard unit wires
+	input logic [31:0]	rs1_addr_D,
+	input logic [31:0]	rs2_addr_D,
+
+	output logic [31:0]	rs1_addr_E,
+	output logic [31:0]	rs2_addr_E
+
 );
 
 	// datapath signals
@@ -75,22 +83,28 @@ module pipe_decode(
     // flip-flops for control signals
     control_t control_q, control_d;
 
+	// hazard signals
+	typedef struct packed {
+		logic [31:0] rs1_addr;
+		logic [31:0] rs2_addr;
+	} hazard_t;
+
+	hazard_t hazard_q, hazard_d;
+
     always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
             datapath_q <= '0; // Reset all datapath signals to 0
             control_q  <= '0; // Reset all control signals to 0
+			hazard_q <= '0;
         end else begin
             datapath_q <= datapath_d; // Transfer data on clock edge
             control_q  <= control_d;
+			hazard_q <= hazard_d;
         end
     end
 
     // Combinational logic to assign inputs to the next-state (d) registers
     always_comb begin
-        if (stall) begin
-            // Pipe output back to input to hold the current state
-            datapath_d 	= datapath_q;
-            control_d  	= control_q;
 			rs1_data_E  = 0;
 			rs2_data_E  = 0;
 			imm_o_E     = 0;
@@ -107,28 +121,19 @@ module pipe_decode(
 			mem_rd_E    = 0;
 			mem_mask_E  = 0;
 			set_wb_E    = 0;
+			rs1_addr_E	= 0;
+			rs2_addr_E	= 0;
+        if (stall) begin
+            // Pipe output back to input to hold the current state
+            datapath_d 	= datapath_q;
+            control_d  	= control_q;
+			hazard_d	= hazard_q;
         end
         else if (flush) begin
             // Reset the pipeline stage when flushing
             datapath_d = '0;
 			control_d  = '0;
-			
-			rs1_data_E  = 0;
-			rs2_data_E  = 0;
-			imm_o_E     = 0;
-			brc_input_E = 0;
-			PC_E        = 0;
-			PC4_E       = 0;
-			rd_E        = 0;
-			reg_wr_E    = 0;
-			br_type_E   = 0;
-			sel_a_E     = 0;
-			sel_b_E     = 0;
-			alu_op_E    = 0;
-			mem_wr_E    = 0;
-			mem_rd_E    = 0;
-			mem_mask_E  = 0;
-			set_wb_E    = 0;
+			hazard_d   = '0;
         end
         else begin
 			// Output assignments from the registered (q) state
@@ -150,6 +155,9 @@ module pipe_decode(
 			mem_mask_E  = control_q.mem_mask;
 			set_wb_E    = control_q.set_wb;
 
+			rs1_addr_E	= hazard_q.rs1_addr;
+			rs2_addr_E	= hazard_q.rs2_addr;
+
 			// Normal operation: pass inputs into flip-flops
             datapath_d.rs1_data  = rs1_data_D;
             datapath_d.rs2_data  = rs2_data_D;
@@ -168,6 +176,9 @@ module pipe_decode(
             control_d.mem_rd     = mem_rd_D;
             control_d.mem_mask   = mem_mask_D;
             control_d.set_wb     = set_wb_D;
+
+			hazard_d.rs1_addr	 = rs1_addr_D;
+			hazard_d.rs2_addr	 = rs2_addr_D;
         end
     end
 
