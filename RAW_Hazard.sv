@@ -1,47 +1,29 @@
 `timescale 1ns/1ns
 
 module RAW_Hazard(
-	input logic mem_flag,
-	input logic wb_flag,
-	input logic [3:0] rs,
-	input logic [3:0] rt,
-	input logic [3:0] mem_wrt_dst,
-	input logic [3:0] wb_wrt_dst,
-	output logic Fwd_rs_1,
-	output logic Fwd_rt_1,
-	output logic Fwd_rs_2,
-	output logic Fwd_rt_2
+	input logic [3:0] rs1,    // src reg from EXE
+	input logic [3:0] rs2,    // src reg from EXE
+	input logic reg_wr_M,     // flag to know if dst reg actually written to
+	input logic reg_wr_W,
+	input logic [3:0] rdM,    // dst reg from Mem
+	input logic [3:0] rdW, 	  // dst reg from WB
+	output logic [1:0] FwdAE, // mux sel o/p signals
+	output logic [1:0] FwdBE  // 0 no fwd, 1 fwd from WB, 2 fwd from MEM
 
 );
 
 always_comb begin
-	// Dependent instruction in MEM
-	if (mem_flag==1) begin
-		if (mem_wrt_dst==rs) 
-			Fwd_rs_1=1;
-		else if (mem_wrt_dst==rt)
-			Fwd_rt_1=1;
-	end
-	// Dependent instruction in WB	
-	else if (wb_flag==1 && wb_wrt_dst==rs) begin
-		if (mem_wrt_dst != rs) // check if MEM is overritten
-			Fwd_rs_2=1;
-		else
-			Fwd_rs_2=0;
-	end 
-	else if (wb_flag==1 && wb_wrt_dst==rt) begin
-		if (mem_wrt_dst != rs) // check if MEM is overritten
-			Fwd_rt_2=1;
-		else
-			Fwd_rt_2=0;
-	end 
-	// No Fowarding needed
-	else begin
-		Fwd_rs_1 = 0;
-		Fwd_rt_1 = 0;
-		Fwd_rs_2 = 0;
-		Fwd_rt_2 = 0;
-	end
-	
+	if (((rs1==rdM) && reg_wr_M) && (rs1!=0))
+		FwdAE = 2;
+	else if (((rs1== rdW) & reg_wr_W) & (rs1!=0))
+		FwdAE = 1;
+	else
+		FwdAE=0;
+	if (((rs2==rdM) && reg_wr_M) && (rs2!=0))
+		FwdBE = 2;
+	else if (((rs2== rdW) && reg_wr_W) && (rs2!=0))
+		FwdBE = 1;
+	else
+		FwdBE=0;
 end
 endmodule
