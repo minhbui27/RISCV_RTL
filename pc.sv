@@ -3,7 +3,7 @@
 module pc (
 	input logic 		clk,
 	input logic 		rst,
-	input logic 		stall_F,
+	input logic 		stallF,
 	input logic [31:0] 	pc_i,
 	output logic [31:0] pc_o
 );
@@ -19,7 +19,7 @@ module pc (
 	end
 
 	always_comb begin
-		if(stall_F) begin
+		if(stallF) begin
 			pc_buf_d = pc_buf_q;
 			pc_o = 0;
 		end	

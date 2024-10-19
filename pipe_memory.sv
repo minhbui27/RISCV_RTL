@@ -14,13 +14,13 @@ module pipe_memory(
 	output logic [1:0]	sel_wb_W,
 
 	// datapath signals
-	input logic 		alu_o_M,
-	input logic 		rd_data_M,
+	input logic [31:0]	alu_o_M,
+	input logic [31:0]	rd_data_M,
 	input logic [31:0] 	PC4_M,
 	input logic [4:0]	rd_M,
 
-	output logic 		alu_o_W,
-	output logic 		rd_data_W,
+	output logic [31:0]	alu_o_W,
+	output logic [31:0]	rd_data_W,
 	output logic [31:0] PC4_W,
 	output logic [4:0]	rd_W
 );
