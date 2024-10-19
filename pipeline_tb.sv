@@ -279,6 +279,10 @@ module pipeline_tb();
         .sel (sel_wb_W),
         .mux_o (mux_wb_out_W)
     );
+	
+
+	//====================================== Hazard Unit ====================================== 
+	
 	// create clock
 	initial begin
 		forever begin

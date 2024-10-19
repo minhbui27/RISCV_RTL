@@ -1,9 +1,9 @@
 // this module handles hazards where we are lw-ing, so getting data at the end
 // of mem stage and trying to pass it to the start of execute state for ALU
 module stall_hazard (
-	input logic [31:0] rs1_addr_D,	
-	input logic [31:0] rs2_addr_D,	
-	input logic [31:0] rd_E,
+	input logic [4:0] rs1_addr_D,	
+	input logic [4:0] rs2_addr_D,	
+	input logic [4:0] rd_E,
 	input logic [1:0] sel_wb_E,
 	output logic stallF,
 	output logic stallD,
