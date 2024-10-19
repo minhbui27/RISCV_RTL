@@ -19,6 +19,11 @@ module dmem (
 		for (i=0; i<64; i=i+1)
 			mem[i] = 32'h0000_0000;
 	end
+	
+	always_comb begin
+		if(mem_rd) temp_rd = mem[addr[31:2]];
+		else temp_rd = '0;
+	end
 
 	// Combinational Read - Temporary Data to Read
 	always_comb
