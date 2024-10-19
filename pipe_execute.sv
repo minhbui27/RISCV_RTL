@@ -54,7 +54,7 @@ module pipe_execute(
 	// flip-flops for datapath
 	datapath_t datapath_d, datapath_q;
 
-	always_ff @(posedge clk or posedge rst) begin
+	always_ff @(posedge clk) begin
 		if (rst) begin
 			control_q	<= 0;
 			datapath_q	<= 0;
@@ -65,33 +65,22 @@ module pipe_execute(
 	end
 
 	always_comb begin
-		if (stall) begin
-			control_d	= control_q;
 			reg_wr_M	= 0;
 			mem_wr_M	= 0;
 			mem_rd_M	= 0;
 			mem_mask_M	= 0;
 			sel_wb_M	= 0;
-
-			datapath_d	= datapath_q;
 			alu_o_M		= 0;
 			wr_data_M	= 0;
 			rd_M		= 0;
 			PC4_M		= 0;
+		if (stall) begin
+			control_d	= control_q;
+			datapath_d	= datapath_q;
 		end
 		else if (flush) begin
 			control_d	 = 0;
-			reg_wr_M	 = 0;
-			mem_wr_M	 = 0;
-			mem_rd_M	 = 0;
-			mem_mask_M	 = 0;
-			sel_wb_M	 = 0;
-
 			datapath_d	 = 0;
-			alu_o_M		 = 0;
-			wr_data_M	 = 0;
-			rd_M		 = 0;
-			PC4_M		 = 0;
 		end
 		else begin
 			// control
