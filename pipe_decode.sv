@@ -91,7 +91,7 @@ module pipe_decode(
 
 	hazard_t hazard_q, hazard_d;
 
-    always_ff @(posedge clk or posedge reset) begin
+    always_ff @(posedge clk) begin
         if (reset) begin
             datapath_q <= '0; // Reset all datapath signals to 0
             control_q  <= '0; // Reset all control signals to 0
