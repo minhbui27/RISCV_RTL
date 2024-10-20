@@ -13,7 +13,7 @@ module stall_hazard (
 		// if a lw is in the execute stage - sel_wb_E = 00, and
 		// if the load's destination register is equal to either of the source
 		// then we have a lw hazard, must stall pipes F,D flush E
-		if(!sel_wb_E & ((rs1_addr_D == rd_E) | (rs2_addr_D == rd_E))) begin
+		if(sel_wb_E == 0 & ((rs1_addr_D == rd_E) | (rs2_addr_D == rd_E)) & rd_E != 0) begin
 			stallF = 1;
 			stallD = 1;
 			flushE = 1;

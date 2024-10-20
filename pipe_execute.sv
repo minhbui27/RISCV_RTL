@@ -24,11 +24,13 @@ module pipe_execute(
 	input logic [31:0]	wr_data_E,
 	input logic [4:0]	rd_E,
 	input logic [31:0]	PC4_E,
-
+    input logic [4:0]   rs2_addr_E,
+    
 	output logic [31:0] alu_o_M,
 	output logic [31:0] wr_data_M,
 	output logic [4:0]	rd_M,
-	output logic [31:0] PC4_M
+	output logic [31:0] PC4_M,
+	output logic [4:0]  rs2_addr_M
 );
 
 	// control signals
@@ -49,6 +51,7 @@ module pipe_execute(
 		logic [31:0]	wr_data;
 		logic [4:0] 	rd;
 		logic [31:0]	PC4;
+		logic [4:0]     rs2_addr;
 	} datapath_t;
 
 	// flip-flops for datapath
@@ -74,6 +77,7 @@ module pipe_execute(
 			wr_data_M	= 0;
 			rd_M		= 0;
 			PC4_M		= 0;
+			rs2_addr_M  = 0;
 		if (stall) begin
 			control_d	= control_q;
 			datapath_d	= datapath_q;
@@ -101,11 +105,13 @@ module pipe_execute(
 			wr_data_M 	= datapath_q.wr_data;
 			rd_M		= datapath_q.rd;
 			PC4_M 		= datapath_q.PC4;
+			rs2_addr_M  = datapath_q.rs2_addr;
 
 			datapath_d.alu_o	= alu_o_E;
 			datapath_d.wr_data	= wr_data_E;
 			datapath_d.rd		= rd_E;
 			datapath_d.PC4		= PC4_E;
+			datapath_d.rs2_addr  = rs2_addr_E;
 		end
 	end
 endmodule

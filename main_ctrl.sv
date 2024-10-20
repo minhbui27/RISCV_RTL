@@ -107,14 +107,15 @@ module main_ctrl (
 				alu_op = 0;	
 			end
 			default: begin
-				sel_a = 0;
-				sel_b = 0;
-				sel_wb = 0;
-				mem_wr = 0;
-				mem_rd = 0;
-				mask = 0;
-				alu_op = 0;
-				reg_wr = 0;
+				sel_a = '0;
+				sel_b = '0;
+				sel_wb = '0;
+				mem_wr = '0;
+				mem_rd = '0;
+				mask = '0;
+				alu_op = '0;
+				reg_wr = '0;
+				br_type = '0;
 			end
 		endcase
   end

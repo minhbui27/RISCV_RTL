@@ -34,8 +34,8 @@ module pipe_memory(
 	control_t control_d, control_q;
 
 	typedef struct packed {
-		logic alu_o;
-		logic rd_data;
+		logic [31:0] alu_o;
+		logic [31:0] rd_data;
 		logic [31:0] PC4;
 		logic [4:0] rd;
 	} datapath_t;

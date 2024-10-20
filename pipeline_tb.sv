@@ -17,6 +17,7 @@ module pipeline_tb();
 	logic [2:0] br_type_D, mem_mask_D;
 	logic [3:0] alu_op_D;
 
+    logic [4:0] rd_D;
 	assign brc_input_D = inst_D[6:0];
 	assign rd_D = inst_D[11:7];
 
@@ -32,7 +33,6 @@ module pipeline_tb();
 
 	// Mem r/w stage wires
 	logic [31:0] alu_o_M, wr_data_M, PC4_M, rd_data_M;	
-	logic [4:0] rd_M;
 
 	logic reg_wr_M, mem_wr_M, mem_rd_M;
 	logic [1:0] sel_wb_M;
@@ -50,7 +50,7 @@ module pipeline_tb();
 	// flush and stall signals
 	logic stallF, stallD, flushD, flushE;	
 	// rs1 and rs2 for hazard destination
-	logic [4:0] rs1_addr_E, rs2_addr_E;
+	logic [4:0] rs1_addr_E, rs2_addr_E, rs2_addr_M;
 	//====================================== Fetch Stage ====================================== 
 	pc pc(
 		.clk (clk),
@@ -186,8 +186,8 @@ module pipeline_tb();
 	);
 
     mux2_1 mux_a (
-        .data1(PC_E),
-        .data2(mux_fw_a),
+        .data1(mux_fw_a),
+        .data2(PC_E),
         .sel(sel_a_E),
         .mux_out(mux_a_out)
     );
@@ -229,6 +229,7 @@ module pipeline_tb();
 		.wr_data_E		(rs2_data_E),
 		.rd_E			(rd_E),
 		.PC4_E			(PC4_E),
+		.rs2_addr_E     (rs2_addr_E),
 		// output()s
 		.alu_o_M		(alu_o_M),
 		.wr_data_M		(wr_data_M),
@@ -238,7 +239,8 @@ module pipeline_tb();
 		.mem_wr_M		(mem_wr_M),
 		.mem_rd_M		(mem_rd_M),
  		.mem_mask_M		(mem_mask_M),
-		.sel_wb_M		(sel_wb_M)
+		.sel_wb_M		(sel_wb_M),
+		.rs2_addr_M     (rs2_addr_M)  
 	);
 	//====================================== Memory Stage ====================================== 
 		
@@ -317,7 +319,7 @@ module pipeline_tb();
 
 	initial begin
 		rst <= 1;
-		#10;
+		#2;
 		rst <= 0;
 		
 
