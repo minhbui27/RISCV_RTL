@@ -92,7 +92,7 @@ module pipe_decode(
 	hazard_t hazard_q, hazard_d;
 
     always_ff @(posedge clk) begin
-        if (reset) begin
+        if (reset | flush) begin
             datapath_q <= '0; // Reset all datapath signals to 0
             control_q  <= '0; // Reset all control signals to 0
 			hazard_q <= '0;
@@ -105,58 +105,35 @@ module pipe_decode(
 
     // Combinational logic to assign inputs to the next-state (d) registers
     always_comb begin
-			rs1_data_E  = 0;
-			rs2_data_E  = 0;
-			imm_o_E     = 0;
-			brc_input_E = 0;
-			PC_E        = 0;
-			PC4_E       = 0;
-			rd_E        = 0;
-			reg_wr_E    = 0;
-			br_type_E   = 0;
-			sel_a_E     = 0;
-			sel_b_E     = 0;
-			alu_op_E    = 0;
-			mem_wr_E    = 0;
-			mem_rd_E    = 0;
-			mem_mask_E  = 0;
-			sel_wb_E    = 0;
-			rs1_addr_E	= 0;
-			rs2_addr_E	= 0;
+        rs1_data_E  = datapath_q.rs1_data;
+		rs2_data_E  = datapath_q.rs2_data;
+		imm_o_E     = datapath_q.imm_o;
+		brc_input_E = datapath_q.brc_input;
+		PC_E        = datapath_q.PC;
+		PC4_E       = datapath_q.PC4;
+		rd_E        = datapath_q.rd;
+
+		reg_wr_E    = control_q.reg_wr;
+		br_type_E   = control_q.br_type;
+		sel_a_E     = control_q.sel_a;
+		sel_b_E     = control_q.sel_b;
+		alu_op_E    = control_q.alu_op;
+		mem_wr_E    = control_q.mem_wr;
+		mem_rd_E    = control_q.mem_rd;
+		mem_mask_E  = control_q.mem_mask;
+		sel_wb_E    = control_q.sel_wb;
+
+		rs1_addr_E	= hazard_q.rs1_addr;
+		rs2_addr_E	= hazard_q.rs2_addr;
+
         if (stall) begin
             // Pipe output back to input to hold the current state
             datapath_d 	= datapath_q;
             control_d  	= control_q;
 			hazard_d	= hazard_q;
         end
-        else if (flush) begin
-            // Reset the pipeline stage when flushing
-            datapath_d = '0;
-			control_d  = '0;
-			hazard_d   = '0;
-        end
         else begin
 			// Output assignments from the registered (q) state
-			rs1_data_E  = datapath_q.rs1_data;
-			rs2_data_E  = datapath_q.rs2_data;
-			imm_o_E     = datapath_q.imm_o;
-			brc_input_E = datapath_q.brc_input;
-			PC_E        = datapath_q.PC;
-			PC4_E       = datapath_q.PC4;
-			rd_E        = datapath_q.rd;
-
-			reg_wr_E    = control_q.reg_wr;
-			br_type_E   = control_q.br_type;
-			sel_a_E     = control_q.sel_a;
-			sel_b_E     = control_q.sel_b;
-			alu_op_E    = control_q.alu_op;
-			mem_wr_E    = control_q.mem_wr;
-			mem_rd_E    = control_q.mem_rd;
-			mem_mask_E  = control_q.mem_mask;
-			sel_wb_E    = control_q.sel_wb;
-
-			rs1_addr_E	= hazard_q.rs1_addr;
-			rs2_addr_E	= hazard_q.rs2_addr;
 
 			// Normal operation: pass inputs into flip-flops
             datapath_d.rs1_data  = rs1_data_D;

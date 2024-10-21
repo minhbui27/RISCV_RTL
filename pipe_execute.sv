@@ -58,7 +58,7 @@ module pipe_execute(
 	datapath_t datapath_d, datapath_q;
 
 	always_ff @(posedge clk) begin
-		if (rst) begin
+		if (rst | flush) begin
 			control_q	<= 0;
 			datapath_q	<= 0;
 		end else begin
@@ -82,23 +82,8 @@ module pipe_execute(
 			control_d	= control_q;
 			datapath_d	= datapath_q;
 		end
-		else if (flush) begin
-			control_d	 = 0;
-			datapath_d	 = 0;
-			reg_wr_M	= 0;
-			mem_wr_M	= 0;
-			mem_rd_M	= 0;
-			mem_mask_M	= 0;
-			sel_wb_M	= 0;
-			alu_o_M		= 0;
-			wr_data_M	= 0;
-			rd_M		= 0;
-			PC4_M		= 0;
-			rs2_addr_M  = 0;
-		end
 		else begin
 			// control
-			
 			control_d.reg_wr	= reg_wr_E;
 			control_d.mem_wr	= mem_wr_E;
 			control_d.mem_rd	= mem_rd_E;
@@ -106,7 +91,6 @@ module pipe_execute(
 			control_d.sel_wb	= sel_wb_E;
 
 			// datapath
-
 			datapath_d.alu_o	= alu_o_E;
 			datapath_d.wr_data	= wr_data_E;
 			datapath_d.rd		= rd_E;

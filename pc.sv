@@ -19,13 +19,12 @@ module pc (
 	end
 
 	always_comb begin
+	    pc_o = pc_buf_q;
 		if(stallF) begin
 			pc_buf_d = pc_buf_q;
-			pc_o = 0;
 		end	
 		else begin
 			pc_buf_d = pc_i;
-			pc_o = pc_buf_q;
 		end
 	end
 endmodule

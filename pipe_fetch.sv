@@ -18,7 +18,7 @@ module pipe_fetch(
 	logic [31:0] PC4_buff_d, PC4_buff_q;
 
 	always_ff @(posedge clk) begin
-		if (rst) begin
+		if (rst | flush) begin
 			INST_buff_q <= 0;
 			PC_buff_q <= 0;
 			PC4_buff_q <= 0;
@@ -33,22 +33,14 @@ module pipe_fetch(
 
 	always_comb begin
 		INST_D = INST_buff_q;
-			PC_D = PC_buff_q;
-			PC4_D = PC4_buff_q;
+		PC_D = PC_buff_q;
+		PC4_D = PC4_buff_q;
 		
 		if (stall) begin
 			// pipe output back to input to save for next cycle
 			INST_buff_d = INST_buff_q;
 			PC_buff_d = PC_buff_q;
 			PC4_buff_d = PC4_buff_q;	
-		end
-		else if (flush) begin
-			INST_buff_d = 0;
-			PC_buff_d = 0;
-			PC4_buff_d = 0;
-			INST_D = 0;
-		    PC_D = 0;
-		    PC4_D = 0;
 		end
 		else begin
 			INST_buff_d = INST_F;

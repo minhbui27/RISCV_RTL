@@ -44,7 +44,7 @@ module pipe_memory(
 	datapath_t datapath_d, datapath_q;
 
 	always_ff @(posedge clk) begin
-		if (rst) begin
+		if (rst | flush) begin
 			control_q <= 0;
 			datapath_q <= 0;
 		end else begin
@@ -54,34 +54,22 @@ module pipe_memory(
 	end
 
 	always_comb begin
-			reg_wr_W = 0;
-			sel_wb_W = 0;
-			alu_o_W = 0;
-			rd_data_W = 0;
-			PC4_W = 0;
-			rd_W = 0;
+	       	alu_o_W = datapath_q.alu_o;
+			rd_data_W = datapath_q.rd_data;
+			PC4_W = datapath_q.PC4;
+			rd_W = datapath_q.rd;
+			
+			reg_wr_W = control_q.reg_wr;
+			sel_wb_W = control_q.sel_wb;
 		if (stall) begin
 			control_d = control_q;
 			datapath_d = datapath_q;
 		end
-		else if (flush)	begin
-			control_d = 0;
-			datapath_d = 0;
-		end
 		else begin
-			alu_o_W = datapath_q.alu_o;
-			rd_data_W = datapath_q.rd_data;
-			PC4_W = datapath_q.PC4;
-			rd_W = datapath_q.rd;
-
 			datapath_d.alu_o = alu_o_M;
 			datapath_d.rd_data = rd_data_M;
 			datapath_d.PC4 = PC4_M;
 			datapath_d.rd = rd_M;
-
-			reg_wr_W = control_q.reg_wr;
-			sel_wb_W = control_q.sel_wb;
-
 			control_d.reg_wr = reg_wr_M;
 			control_d.sel_wb = sel_wb_M;
 		end
