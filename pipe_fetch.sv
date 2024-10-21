@@ -32,9 +32,9 @@ module pipe_fetch(
 
 
 	always_comb begin
-		INST_D = 0;
-		PC_D = 0;
-		PC4_D = 0;
+		INST_D = INST_buff_q;
+			PC_D = PC_buff_q;
+			PC4_D = PC4_buff_q;
 		
 		if (stall) begin
 			// pipe output back to input to save for next cycle
@@ -46,11 +46,11 @@ module pipe_fetch(
 			INST_buff_d = 0;
 			PC_buff_d = 0;
 			PC4_buff_d = 0;
+			INST_D = 0;
+		    PC_D = 0;
+		    PC4_D = 0;
 		end
 		else begin
-			INST_D = INST_buff_q;
-			PC_D = PC_buff_q;
-			PC4_D = PC4_buff_q;
 			INST_buff_d = INST_F;
 			PC_buff_d = PC_F;
 			PC4_buff_d = PC4_F;

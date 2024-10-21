@@ -68,6 +68,23 @@ module pipe_execute(
 	end
 
 	always_comb begin
+	    reg_wr_M 	= control_q.reg_wr;
+		mem_wr_M 	= control_q.mem_wr;
+		mem_rd_M 	= control_q.mem_rd;
+		mem_mask_M	= control_q.mem_mask;
+		sel_wb_M 	= control_q.sel_wb;
+		alu_o_M 	= datapath_q.alu_o;
+		wr_data_M 	= datapath_q.wr_data;
+		rd_M		= datapath_q.rd;
+		PC4_M 		= datapath_q.PC4;
+		rs2_addr_M  = datapath_q.rs2_addr;
+		if (stall) begin
+			control_d	= control_q;
+			datapath_d	= datapath_q;
+		end
+		else if (flush) begin
+			control_d	 = 0;
+			datapath_d	 = 0;
 			reg_wr_M	= 0;
 			mem_wr_M	= 0;
 			mem_rd_M	= 0;
@@ -78,22 +95,10 @@ module pipe_execute(
 			rd_M		= 0;
 			PC4_M		= 0;
 			rs2_addr_M  = 0;
-		if (stall) begin
-			control_d	= control_q;
-			datapath_d	= datapath_q;
-		end
-		else if (flush) begin
-			control_d	 = 0;
-			datapath_d	 = 0;
 		end
 		else begin
 			// control
-			reg_wr_M 	= control_q.reg_wr;
-			mem_wr_M 	= control_q.mem_wr;
-			mem_rd_M 	= control_q.mem_rd;
-			mem_mask_M	= control_q.mem_mask;
-			sel_wb_M 	= control_q.sel_wb;
-
+			
 			control_d.reg_wr	= reg_wr_E;
 			control_d.mem_wr	= mem_wr_E;
 			control_d.mem_rd	= mem_rd_E;
@@ -101,11 +106,6 @@ module pipe_execute(
 			control_d.sel_wb	= sel_wb_E;
 
 			// datapath
-			alu_o_M 	= datapath_q.alu_o;
-			wr_data_M 	= datapath_q.wr_data;
-			rd_M		= datapath_q.rd;
-			PC4_M 		= datapath_q.PC4;
-			rs2_addr_M  = datapath_q.rs2_addr;
 
 			datapath_d.alu_o	= alu_o_E;
 			datapath_d.wr_data	= wr_data_E;

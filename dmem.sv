@@ -30,6 +30,7 @@ module dmem (
 	// Combinational Read - Temporary Data to Read
 	always_comb
 	begin
+	   dmem_o = '0;
 		if (mem_rd)
 		begin
 			case (mask)

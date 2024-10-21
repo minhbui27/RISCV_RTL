@@ -16,6 +16,7 @@ module pipeline_tb();
 	logic [1:0] sel_wb_D;
 	logic [2:0] br_type_D, mem_mask_D;
 	logic [3:0] alu_op_D;
+	logic [6:0] brc_input_D;
 
     logic [4:0] rd_D;
 	assign brc_input_D = inst_D[6:0];
@@ -327,6 +328,8 @@ module pipeline_tb();
 	);	
 	// create clock
 	initial begin
+	    pc_i <= 0;
+	    clk <= 0;
 		forever begin
 			clk <= 0;
 			#1;
@@ -337,9 +340,13 @@ module pipeline_tb();
 
 	initial begin
 		rst <= 1;
+		stallD <= 0;
 		#2;
 		rst <= 0;
-		
+//		#17;
+//		stallD <= 1;
+//		#2;
+//		stallD <= 0;
 
 		#200;
 		$finish;

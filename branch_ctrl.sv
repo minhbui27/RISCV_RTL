@@ -7,6 +7,7 @@ module branch_ctrl(
     output logic br_en
     );
     always_comb begin
+        br_en = 0;
         case(op_code)
             // jal
             7'b110_1111: begin
@@ -39,6 +40,7 @@ module branch_ctrl(
                     3'b111: begin
                         br_en = $signed(rs1_data) >= $signed(rs2_data);
                     end
+                    default: br_en = 0;
                 endcase
             end
             default: begin
