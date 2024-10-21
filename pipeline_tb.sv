@@ -22,7 +22,7 @@ module pipeline_tb();
 	assign rd_D = inst_D[11:7];
 
 	// Execute stage wires
-	logic [31:0] rs1_data_E, rs2_data_E, imm_o_E, PC_E, PC4_E, alu_o_E, mux_a_out, mux_b_out;	
+	logic [31:0] rs1_data_E, rs2_data_E, imm_o_E, PC_E, PC4_E, alu_o_E, mux_a_out, mux_b_out, wr_data_E;	
 	logic [4:0] rd_E;
 	logic [6:0] brc_input_E;
 
@@ -33,7 +33,7 @@ module pipeline_tb();
 
 	// Mem r/w stage wires
 	logic [31:0] alu_o_M, wr_data_M, PC4_M, rd_data_M;	
-
+    logic [4:0] rd_M;
 	logic reg_wr_M, mem_wr_M, mem_rd_M;
 	logic [1:0] sel_wb_M;
 	logic [2:0] mem_mask_M;
@@ -46,7 +46,8 @@ module pipeline_tb();
 
 	// Forward MUX selectors for E stage RAW hazard
 	logic [1:0] forwardAE, forwardBE;
-	logic [31:0] mux_fw_a, mux_fw_b;
+	logic [31:0] mux_fw_a, mux_fw_b, mux_fw_M;
+	logic forwardM, forwardCM;
 	// flush and stall signals
 	logic stallF, stallD, flushD, flushE;	
 	// rs1 and rs2 for hazard destination
@@ -199,6 +200,13 @@ module pipeline_tb();
         .mux_out(mux_b_out)
     );
     
+    mux2_1 forward_ce (
+        .data1(rs2_data_E),
+        .data2(alu_o_W),
+        .sel(forwardCM),
+        .mux_out(wr_data_E)
+    );
+    
 	branch_ctrl branch_ctrl_dut (
 		.br_type (br_type_E),
 		.op_code (brc_input_E),
@@ -226,7 +234,7 @@ module pipeline_tb();
 		.mem_mask_E		(mem_mask_E),
 		.sel_wb_E		(sel_wb_E),
 		.alu_o_E		(alu_o_E),
-		.wr_data_E		(rs2_data_E),
+		.wr_data_E		(wr_data_E),
 		.rd_E			(rd_E),
 		.PC4_E			(PC4_E),
 		.rs2_addr_E     (rs2_addr_E),
@@ -243,11 +251,18 @@ module pipeline_tb();
 		.rs2_addr_M     (rs2_addr_M)  
 	);
 	//====================================== Memory Stage ====================================== 
-		
+	
+	mux2_1 muxM (
+        .data1(wr_data_M),
+	    .data2(alu_o_W),
+	    .sel(forwardM),
+	    .mux_out(mux_fw_M)
+	);	
+    
     dmem dmem_dut(
          .clk (clk),
          .addr (alu_o_M),
-         .wr_data (wr_data_M),
+         .wr_data (mux_fw_M),
          .mem_wr (mem_wr_M),
          .mem_rd (mem_rd_M),
          .mask  (mem_mask_M),
@@ -293,6 +308,7 @@ module pipeline_tb();
 		.rd_W			(rd_W),
 		.rs1_E			(rs1_addr_E),
 		.rs2_E			(rs2_addr_E),
+		.rs2_M          (rs2_addr_M),
 		.reg_wr_M		(reg_wr_M),
 		.reg_wr_W		(reg_wr_W),
 		.br_en_E		(br_en_E),
@@ -304,7 +320,9 @@ module pipeline_tb();
 		.flushD			(flushD),
 	
 		.forwardAE		(forwardAE),
-		.forwardBE		(forwardBE)
+		.forwardBE		(forwardBE),
+		.forwardM       (forwardM),
+		.forwardCM      (forwardCM)
 	
 	);	
 	// create clock

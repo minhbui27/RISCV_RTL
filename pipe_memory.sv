@@ -27,7 +27,7 @@ module pipe_memory(
 
 	typedef struct packed {
 		logic reg_wr;
-		logic sel_wb;
+		logic [1:0] sel_wb;
 	} control_t;
 
 	// control flip-flops

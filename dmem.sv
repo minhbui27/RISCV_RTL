@@ -80,6 +80,7 @@ module dmem (
 	// Sequential Write - Temporary data to write
 	always_comb 
 	begin
+	    temp_wr = 0;
 		if (mem_wr)
 		begin
 			case (mask)
@@ -103,6 +104,7 @@ module dmem (
 				begin
 					temp_wr = wr_data;
 				end
+				default: temp_wr = 0;
 			endcase
 		end
 	end	

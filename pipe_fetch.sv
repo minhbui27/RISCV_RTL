@@ -35,6 +35,7 @@ module pipe_fetch(
 		INST_D = 0;
 		PC_D = 0;
 		PC4_D = 0;
+		
 		if (stall) begin
 			// pipe output back to input to save for next cycle
 			INST_buff_d = INST_buff_q;

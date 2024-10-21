@@ -25,6 +25,15 @@ module main_ctrl (
 	assign inst = inst_t'(inst_i);
 
   always_comb begin : mux_control
+        sel_a = '0;
+		sel_b = '0;
+		sel_wb = '0;
+		mem_wr = '0;
+		mem_rd = '0;
+		mask = '0;
+		alu_op = '0;
+		reg_wr = '0;
+	    br_type = '0;
 		// Only doing R,I (no jalr),S types for now. 
 		case (inst.opcode)
 			// R types

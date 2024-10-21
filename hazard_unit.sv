@@ -9,6 +9,7 @@ module hazard_unit (
 	input logic [4:0] rd_W,
 	input logic [4:0] rs1_E,
 	input logic [4:0] rs2_E,
+	input logic [4:0] rs2_M,
 	input logic	reg_wr_M,
 	input logic reg_wr_W,
 	input logic br_en_E,
@@ -20,7 +21,9 @@ module hazard_unit (
 	output logic flushD,
 
 	output logic [1:0] forwardAE,
-	output logic [1:0] forwardBE
+	output logic [1:0] forwardBE,
+	output logic forwardM,
+	output logic forwardCM
 );
 	logic flushE_stall, flushE_branch;
 	assign flushE = flushE_stall | flushE_branch;
@@ -37,12 +40,15 @@ module hazard_unit (
 	raw_hazard raw_hazard_i (
 		.rs1_E		(rs1_E),
 		.rs2_E		(rs2_E),
+		.rs2_M      (rs2_M),
 		.rdM		(rd_M),
 		.rdW		(rd_W),
 		.reg_wr_M	(reg_wr_M),
 		.reg_wr_W	(reg_wr_W),
 		.forwardAE	(forwardAE),
-		.forwardBE	(forwardBE)
+		.forwardBE	(forwardBE),
+		.forwardM   (forwardM),
+		.forwardCM  (forwardCM)
 	);
 
 	branch_handler branch_handler_i (
@@ -50,5 +56,5 @@ module hazard_unit (
 		.flushD		(flushD),
 		.flushE		(flushE_branch)
 	);
-
+	
 endmodule
