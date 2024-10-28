@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--StateFileType saveLoadState-->
+<topLevel>
+    <Object Class="wsGraphLayout">
+        <SimpleProp Name="layoutType" Value="Auto" Type="wsGraphLayoutType" />
+        <IndexedProp Name="sceneLayoutState">
+            <ObjectProp>
+                <Object Class="wsGraphLayoutState">
+                    <SimpleProp Name="rowHeights" Value="634" Type="string" />
+                    <SimpleProp Name="columnWidths" Value="990" Type="string" />
+                    <SimpleProp Name="cellPositions" Value="0:0:1:1" Type="string" />
+                    <SimpleProp Name="graphPositions" Value="1:0:0" Type="string" />
+                </Object>
+            </ObjectProp>
+        </IndexedProp>
+    </Object>
+</topLevel>
