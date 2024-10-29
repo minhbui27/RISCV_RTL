@@ -12,5 +12,5 @@ ProcessCreationTime_Readable   Tue Oct 29 15:16:21 2024 PDT
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/Word_32bit/symbol/symbol.oa.cdslck.dirlck
-TimeEditLocked                 Tue Oct 29 15:20:29 2024 PDT
+FilePathUsedToEditLock         /fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/SRAM_ARRAY_EL/schematic/sch.oa.cdslck
+TimeEditLocked                 Tue Oct 29 15:20:09 2024 PDT
