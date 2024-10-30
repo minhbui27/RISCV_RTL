@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      ethanlee
 HostName                       ecellvm-14.engr.ucsb.edu
-ProcessIdentifier              32775
-ProcessCreationTime_UTC        1730240181
-ProcessCreationTime_Readable   Tue Oct 29 15:16:21 2024 PDT
+ProcessIdentifier              11229
+ProcessCreationTime_UTC        1730308861
+ProcessCreationTime_Readable   Wed Oct 30 10:21:01 2024 PDT
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/SRAM_ARRAY_EL/schematic/sch.oa.cdslck
-TimeEditLocked                 Tue Oct 29 15:20:09 2024 PDT
+FilePathUsedToEditLock         /fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/AND5X1/schematic/sch.oa.cdslck
+TimeEditLocked                 Wed Oct 30 10:35:27 2024 PDT
