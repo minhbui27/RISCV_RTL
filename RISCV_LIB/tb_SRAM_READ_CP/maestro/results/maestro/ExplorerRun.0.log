@@ -1,6 +1,6 @@
 Starting Single Run, Sweeps and Corners...
 
-Current time: Sun Oct 20 00:12:38 2024 
+Current time: Mon Oct 28 16:39:23 2024 
 Best design point: 1
 Design specs: 
 	00_ECE224A_SRAM_TUTORIAL_tb_tb_SRAM_READ_CP_1	corner	Nominal - 
@@ -10,4 +10,4 @@ ExplorerRun.0
 Number of points completed: 1
 Number of simulation errors: 0
 ExplorerRun.0 completed. 
-Current time: Sun Oct 20 00:12:43 2024 
+Current time: Mon Oct 28 16:39:36 2024 

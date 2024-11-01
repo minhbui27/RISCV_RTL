@@ -1,0 +1,13 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Oct 31 17:16:16 2024 
+Best design point: 1
+Design specs: 
+	RISCV_LIB_tb_4bit_CLABlock_1	corner	Nominal - 
+Design parameters: 
+
+ExplorerRun.0
+Number of points completed: 1
+Number of simulation errors: 0
+ExplorerRun.0 completed. 
+Current time: Thu Oct 31 17:16:31 2024 
