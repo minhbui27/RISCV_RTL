@@ -47,6 +47,9 @@
 					<output>/OUT&lt;0:31&gt;
 						<evalType>point</evalType>
 					</output>
+					<output>/In&lt;0:4&gt;
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>

@@ -167,58 +167,6 @@
 			</partition>
 		</component>
 		<component Name="paramSetup" Type="skillTable">expr</component>
-		<component Name="relxOptions" Type="skillTable">asiEnvSaveTable
-			<partition Name="relxOpts">
-				<field Name="AgingWidth" Type="string">""</field>
-				<field Name="doADELPostProcess" Type="symbol">t</field>
-				<field Name="AgingInst" Type="list">nil</field>
-				<field Name="hspiceNativeMode" Type="string">"MOSRA"</field>
-				<field Name="stress_data_dir" Type="string">""</field>
-				<field Name="DegFN" Type="string">""</field>
-				<field Name="AgingStop" Type="string">""</field>
-				<field Name="fresh_data_dir" Type="string">""</field>
-				<field Name="AgingPeriod" Type="string">""</field>
-				<field Name="DegFP" Type="string">""</field>
-				<field Name="stress_var_list" Type="list">nil</field>
-				<field Name="MosraLife" Type="string">""</field>
-				<field Name="RelTotalTimeUnit" Type="string">"sec"</field>
-				<field Name="aged_data_dir" Type="string">""</field>
-				<field Name="DegF" Type="string">""</field>
-				<field Name="AgingStart" Type="string">""</field>
-				<field Name="simModeType" Type="string">"all"</field>
-				<field Name="bti" Type="list">nil</field>
-				<field Name="DegradationTime" Type="string">""</field>
-				<field Name="aged_var_list" Type="list">nil</field>
-				<field Name="hci" Type="list">nil</field>
-				<field Name="Agethreshold" Type="string">""</field>
-				<field Name="mosrasort" Type="string">"delvth0"</field>
-				<field Name="hspiceEnableAging" Type="list">nil</field>
-				<field Name="RelStep" Type="string">""</field>
-				<field Name="hSpiceRelUsercmdlineOption" Type="string">""</field>
-				<field Name="RelMode" Type="list">(t t)</field>
-				<field Name="simModeFile" Type="string">"input.bs0"</field>
-				<field Name="Integmod" Type="string">"User-defined"</field>
-				<field Name="RelStepUnit" Type="string">"sec"</field>
-				<field Name="hspiceAPIModels" Type="string">""</field>
-				<field Name="hspiceEnableRelxpert" Type="list">nil</field>
-				<field Name="RelTimeMode" Type="string">"Step"</field>
-				<field Name="mraapi" Type="list">nil</field>
-				<field Name="area_scaling" Type="string">""</field>
-				<field Name="appendall" Type="list">nil</field>
-				<field Name="hspiceEnableStress" Type="list">nil</field>
-				<field Name="RelTotalTime" Type="string">"3.1536e+08"</field>
-				<field Name="DelOrLinValue" Type="string">""</field>
-				<field Name="trelax" Type="string">""</field>
-				<field Name="RelStartTimeUnit" Type="string">"sec"</field>
-				<field Name="RelStartTime" Type="string">""</field>
-				<field Name="Tsample2" Type="string">""</field>
-				<field Name="tddb" Type="list">nil</field>
-				<field Name="Xpolatemod" Type="string">"User-defined"</field>
-				<field Name="Frequency" Type="string">""</field>
-				<field Name="circuit_report" Type="list">nil</field>
-				<field Name="Tsample1" Type="string">""</field>
-			</partition>
-		</component>
 		<component Name="simulationFiles" Type="skillTable">_simulationFiles
 			<field Name="includePath" Type="string">""</field>
 			<field Name="definitionFiles" Type="list">nil</field>
