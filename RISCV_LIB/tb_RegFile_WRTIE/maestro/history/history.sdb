@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<setupdb version="7">history
+	<active>Active Setup</active>
+	<history>History
+		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
+			<timestamp>Nov 5 14:38:53 2024</timestamp>
+			<uuid>{94eedafb-5b7c-4a85-b766-a1b185e28a73}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+	</history>
+</setupdb>
