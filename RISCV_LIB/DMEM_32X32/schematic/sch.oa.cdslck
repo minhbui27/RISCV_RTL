@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      cameronbarrett
+HostName                       ecellvm-20.engr.ucsb.edu
+ProcessIdentifier              13466
+ProcessCreationTime_UTC        1731270730
+ProcessCreationTime_Readable   Sun Nov 10 12:32:10 2024 PST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/DMEM_32X32/schematic/sch.oa.cdslck
+TimeEditLocked                 Sun Nov 10 12:34:20 2024 PST
