@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      cameronbarrett
 HostName                       ecellvm-02.engr.ucsb.edu
-ProcessIdentifier              15654
-ProcessCreationTime_UTC        1731090259
-ProcessCreationTime_Readable   Fri Nov  8 10:24:19 2024 PST
+ProcessIdentifier              8823
+ProcessCreationTime_UTC        1731342217
+ProcessCreationTime_Readable   Mon Nov 11 08:23:37 2024 PST
 AppIdentifier                  /ece/cadence/rhel8/IC231/tools/dfII/bin/64bit/layout
 OSType                         lnx86
 ReasonForPlacingEditLock       
 FilePathUsedToEditLock         /fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/tb_DMEM_32X32/maestro/maestro.sdb
-TimeEditLocked                 Fri Nov  8 10:25:29 2024 PST
+TimeEditLocked                 Mon Nov 11 08:32:42 2024 PST

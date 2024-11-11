@@ -66,6 +66,15 @@
 					<output>/I0/I0/I0/I0/I1/Q
 						<evalType>point</evalType>
 					</output>
+					<output>/addr_en
+						<evalType>point</evalType>
+					</output>
+					<output>/ck
+						<evalType>point</evalType>
+					</output>
+					<output>/I0/WL&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>

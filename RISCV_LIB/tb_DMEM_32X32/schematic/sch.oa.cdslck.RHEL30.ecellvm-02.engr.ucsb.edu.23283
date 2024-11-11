@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      cameronbarrett
 HostName                       ecellvm-02.engr.ucsb.edu
-ProcessIdentifier              8823
-ProcessCreationTime_UTC        1731342223
-ProcessCreationTime_Readable   Mon Nov 11 08:23:43 2024 PST
+ProcessIdentifier              23283
+ProcessCreationTime_UTC        1731285755
+ProcessCreationTime_Readable   Sun Nov 10 16:42:35 2024 PST
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
 FilePathUsedToEditLock         /fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/tb_DMEM_32X32/schematic/sch.oa.cdslck
-TimeEditLocked                 Mon Nov 11 08:24:37 2024 PST
+TimeEditLocked                 Sun Nov 10 16:44:10 2024 PST
