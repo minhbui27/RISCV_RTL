@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <setupdb version="7">maestro
 	<active>Active Setup
-		<jobcontrolmode>ICRP</jobcontrolmode>
+		<jobcontrolmode>LSCS</jobcontrolmode>
 		<corners>
 			<corner enabled="1">_default</corner>
 		</corners>
 		<sharedvarinfo></sharedvarinfo>
 		<overwritehistory>0</overwritehistory>
 		<tests>
-			<test>00_ECE224A_SRAM_TUTORIAL_tb_tb_SRAM_WRITE_READ_CP_1
+			<test>RISCV_LIB_tb_8TSRAM_READ_1
 				<tool>ADE</tool>
 				<tooloptions>
 					<option>cell
-						<value>tb_SRAM_WRITE_CP</value>
+						<value>tb_8TSRAM_READ</value>
 					</option>
 					<option>lib
-						<value>00_ECE224A_SRAM_TUTORIAL_tb</value>
+						<value>RISCV_LIB</value>
 					</option>
 					<option>path
 						<value>$AXL_SETUPDB_DIR</value>
 					</option>
 					<option>sim
-						<value>hspiceD</value>
+						<value>spectre</value>
 					</option>
 					<option>view
 						<value>schematic</value>
@@ -35,33 +35,35 @@
 						<value>1</value>
 					</var>
 				</vars>
-				<origoptions></origoptions>
 				<outputs>
-					<output>/wr_en
+					<output>/out_sa1
 						<evalType>point</evalType>
 					</output>
-					<output>/wr_di
+					<output>/out_sa2
 						<evalType>point</evalType>
 					</output>
-					<output>/wl
+					<output>/pchb1
 						<evalType>point</evalType>
 					</output>
-					<output>/bl
+					<output>/pchb2
 						<evalType>point</evalType>
 					</output>
-					<output>/blb
+					<output>/bl1
 						<evalType>point</evalType>
 					</output>
-					<output>"/I3/Q"
+					<output>/bl2
 						<evalType>point</evalType>
 					</output>
-					<output>"/I3/Qb"
+					<output>/net2
 						<evalType>point</evalType>
 					</output>
-					<output>/I3/Q
+					<output>/net1
 						<evalType>point</evalType>
 					</output>
-					<output>/I3/Qb
+					<output>/sae1
+						<evalType>point</evalType>
+					</output>
+					<output>/sae2
 						<evalType>point</evalType>
 					</output>
 				</outputs>
@@ -76,11 +78,11 @@
 		</extensions>
 		<currentmode>Single Run, Sweeps and Corners</currentmode>
 		<checksasserts netlist="0">
-			<test netlist="0" netlistscope="all">00_ECE224A_SRAM_TUTORIAL_tb_tb_SRAM_WRITE_READ_CP_1</test>
+			<test netlist="0" netlistscope="all">RISCV_LIB_tb_8TSRAM_READ_1</test>
 		</checksasserts>
 		<plottingoptions>
 			<plottingoption>waveformtemplate
-				<value></value>
+				<value>(None)</value>
 			</plottingoption>
 			<plottingoption>plottingmode
 				<value>Replace</value>
@@ -92,7 +94,7 @@
 				<value>no</value>
 			</plottingoption>
 			<plottingoption>useMaestroPlottingTemplate
-				<value>no</value>
+				<value>yes</value>
 			</plottingoption>
 			<plottingoption>allplottingtemplates
 				<value></value>
@@ -116,9 +118,6 @@
 			<copyreferenceresults>1</copyreferenceresults>
 		</incrementalsimsetup>
 		<overwritehistoryname>ExplorerRun.0</overwritehistoryname>
-		<incrementalsimulationoptions>
-			<incrementalSimulation>0</incrementalSimulation>
-		</incrementalsimulationoptions>
 	</active>
 	<history>History
 	</history>
