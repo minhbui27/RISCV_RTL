@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      minhbui
+HostName                       ecell-18.engr.ucsb.edu
+ProcessIdentifier              15738
+ProcessCreationTime_UTC        1730755509
+ProcessCreationTime_Readable   Mon Nov  4 13:25:09 2024 PST
+AppIdentifier                  /ece/cadence/rhel8/IC231/tools/dfII/bin/64bit/layout
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/tb_SRAM_WRITE_CP/maestro/maestro.sdb
+TimeEditLocked                 Mon Nov  4 15:09:43 2024 PST
