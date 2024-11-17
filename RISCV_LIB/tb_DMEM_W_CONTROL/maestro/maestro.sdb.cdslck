@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      cameronbarrett
+HostName                       ecellvm-02.engr.ucsb.edu
+ProcessIdentifier              9836
+ProcessCreationTime_UTC        1731776307
+ProcessCreationTime_Readable   Sat Nov 16 08:58:27 2024 PST
+AppIdentifier                  /ece/cadence/rhel8/IC231/tools/dfII/bin/64bit/layout
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/tb_DMEM_W_CONTROL/maestro/maestro.sdb
+TimeEditLocked                 Sat Nov 16 10:59:19 2024 PST
