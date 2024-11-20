@@ -119,6 +119,24 @@
 					<output>/I0/I4/I2&lt;4&gt;/C0&lt;0:31&gt;/PLUS
 						<evalType>point</evalType>
 					</output>
+					<output>"/I0/I4/I2&lt;4&gt;"
+						<evalType>point</evalType>
+					</output>
+					<output>"/I0/I4/I2&lt;4&gt;/BL1"
+						<evalType>point</evalType>
+					</output>
+					<output>/I0/I4/I2&lt;4&gt;/BL1
+						<evalType>point</evalType>
+					</output>
+					<output>/I0/I4/net1&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I0/I4/net2&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/pchb
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>
@@ -128,7 +146,7 @@
 		</checksasserts>
 		<plottingoptions>
 			<plottingoption>waveformtemplate
-				<value>(None)</value>
+				<value></value>
 			</plottingoption>
 			<plottingoption>plottingmode
 				<value>Replace</value>
@@ -140,7 +158,7 @@
 				<value>no</value>
 			</plottingoption>
 			<plottingoption>useMaestroPlottingTemplate
-				<value>yes</value>
+				<value>no</value>
 			</plottingoption>
 			<plottingoption>allplottingtemplates
 				<value></value>
@@ -170,6 +188,9 @@
 			<copyreferenceresults>1</copyreferenceresults>
 		</incrementalsimsetup>
 		<overwritehistoryname>ExplorerRun.0</overwritehistoryname>
+		<incrementalsimulationoptions>
+			<incrementalSimulation>0</incrementalSimulation>
+		</incrementalsimulationoptions>
 	</active>
 	<history>History
 	</history>

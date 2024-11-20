@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<statedb ICVersion="IC23.1-64b.ISR7.27" modifiedTime="11/05/2024 14:38:54" version="5">active
+<statedb ICVersion="IC23.1-64b.ISR7.27" modifiedTime="11/05/2024 15:51:26" version="5">active
 	<Test Name="ECE224_GITHUB_tb_RegFile_WRTIE_1">
 		<component Name="adeInfo" Type="skillTable">adeinfo
 			<field Name="projectDir" Type="string">"/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/.tmpADEDir_ethanlee/ECE224_GITHUB_tb_RegFile_WRTIE_1/simulation"</field>
@@ -93,7 +93,7 @@
 						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
 						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="symbol">t</field>
+						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="implicit" Type="list">nil</field>
 						<field Name="index" Type="fixnum">1</field>
@@ -132,7 +132,7 @@
 						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
 						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="symbol">t</field>
+						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="implicit" Type="list">nil</field>
 						<field Name="index" Type="fixnum">2</field>
@@ -171,7 +171,7 @@
 						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
 						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="symbol">t</field>
+						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="implicit" Type="list">nil</field>
 						<field Name="index" Type="fixnum">3</field>
@@ -210,7 +210,7 @@
 						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
 						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="symbol">t</field>
+						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="implicit" Type="list">nil</field>
 						<field Name="index" Type="fixnum">4</field>
@@ -228,7 +228,7 @@
 					<field Name="outputList_4" Type="defstruct">sevOutputStruct
 						<field Name="name" Type="list">nil</field>
 						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/I0/I4/I2&lt;4&gt;/C0&lt;0:31&gt;/PLUS"</field>
+						<field Name="signal" Type="string">"/I0/I4/net2&lt;0:31&gt;"</field>
 						<field Name="scriptFile" Type="list">nil</field>
 						<field Name="type2" Type="list">nil</field>
 						<field Name="evalType" Type="list">nil</field>
@@ -244,7 +244,7 @@
 						<field Name="origin" Type="list">nil</field>
 						<field Name="sweepSet" Type="list">nil</field>
 						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">terminal</field>
+						<field Name="type" Type="symbol">net</field>
 						<field Name="areaTable" Type="list">nil</field>
 						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
@@ -259,9 +259,48 @@
 						<field Name="label" Type="list">nil</field>
 						<field Name="yaxisUnit" Type="list">nil</field>
 						<field Name="waveSpec" Type="list">nil</field>
-						<field Name="uniqueName" Type="string">"/I0/I4/I2&lt;4&gt;/C0&lt;0:31&gt;/PLUS"</field>
+						<field Name="uniqueName" Type="string">"/I0/I4/net2&lt;0:31&gt;"</field>
 						<field Name="origExprBldrExpression" Type="list">nil</field>
-						<field Name="inValidObject" Type="list">(nil "/I0/I4/I2&lt;4&gt;/C0&lt;0:31&gt;/PLUS")</field>
+						<field Name="inValidObject" Type="list">(nil "/I0/I4/net2&lt;0:31&gt;")</field>
+						<field Name="inLastSet" Type="list">nil</field>
+					</field>
+					<field Name="outputList_5" Type="defstruct">sevOutputStruct
+						<field Name="name" Type="list">nil</field>
+						<field Name="expression" Type="list">nil</field>
+						<field Name="signal" Type="string">"/pchb"</field>
+						<field Name="scriptFile" Type="list">nil</field>
+						<field Name="type2" Type="list">nil</field>
+						<field Name="evalType" Type="list">nil</field>
+						<field Name="displayIt" Type="symbol">t</field>
+						<field Name="internalName" Type="list">nil</field>
+						<field Name="masterName" Type="list">nil</field>
+						<field Name="masterScriptFile" Type="list">nil</field>
+						<field Name="saveScriptFile" Type="list">nil</field>
+						<field Name="updatedScriptFile" Type="list">nil</field>
+						<field Name="saveMasterScriptFile" Type="list">nil</field>
+						<field Name="isReferenced" Type="list">nil</field>
+						<field Name="lastEvalTime" Type="list">nil</field>
+						<field Name="origin" Type="list">nil</field>
+						<field Name="sweepSet" Type="list">nil</field>
+						<field Name="depList" Type="list">nil</field>
+						<field Name="type" Type="symbol">net</field>
+						<field Name="areaTable" Type="list">nil</field>
+						<field Name="selectionDetail" Type="list">nil</field>
+						<field Name="value" Type="list">nil</field>
+						<field Name="plot" Type="symbol">t</field>
+						<field Name="save" Type="list">nil</field>
+						<field Name="march" Type="list">nil</field>
+						<field Name="implicit" Type="list">nil</field>
+						<field Name="index" Type="fixnum">6</field>
+						<field Name="timeStamp" Type="list">nil</field>
+						<field Name="graphType" Type="list">nil</field>
+						<field Name="yaxisLabel" Type="list">nil</field>
+						<field Name="label" Type="list">nil</field>
+						<field Name="yaxisUnit" Type="list">nil</field>
+						<field Name="waveSpec" Type="list">nil</field>
+						<field Name="uniqueName" Type="string">"/pchb"</field>
+						<field Name="origExprBldrExpression" Type="list">nil</field>
+						<field Name="inValidObject" Type="list">(nil "/pchb")</field>
 					</field>
 				</field>
 				<partition Name="envSaveOptions">
@@ -279,59 +318,6 @@
 			</partition>
 			<partition Name="outputsOpRegion">
 				<field Name="opRegion" Type="list">nil</field>
-			</partition>
-		</component>
-		<component Name="paramSetup" Type="skillTable">expr</component>
-		<component Name="relxOptions" Type="skillTable">asiEnvSaveTable
-			<partition Name="relxOpts">
-				<field Name="RelMode" Type="list">(t t)</field>
-				<field Name="RelStepUnit" Type="string">"sec"</field>
-				<field Name="Tsample2" Type="string">""</field>
-				<field Name="Agethreshold" Type="string">""</field>
-				<field Name="Tsample1" Type="string">""</field>
-				<field Name="bti" Type="list">nil</field>
-				<field Name="Xpolatemod" Type="string">"User-defined"</field>
-				<field Name="DegradationTime" Type="string">""</field>
-				<field Name="hci" Type="list">nil</field>
-				<field Name="AgingInst" Type="list">nil</field>
-				<field Name="Integmod" Type="string">"User-defined"</field>
-				<field Name="MosraLife" Type="string">""</field>
-				<field Name="mosrasort" Type="string">"delvth0"</field>
-				<field Name="AgingStart" Type="string">""</field>
-				<field Name="simModeType" Type="string">"all"</field>
-				<field Name="DegF" Type="string">""</field>
-				<field Name="AgingStop" Type="string">""</field>
-				<field Name="aged_var_list" Type="list">nil</field>
-				<field Name="appendall" Type="list">nil</field>
-				<field Name="DegFN" Type="string">""</field>
-				<field Name="doADELPostProcess" Type="symbol">t</field>
-				<field Name="hspiceAPIModels" Type="string">""</field>
-				<field Name="DegFP" Type="string">""</field>
-				<field Name="AgingPeriod" Type="string">""</field>
-				<field Name="simModeFile" Type="string">"input.bs0"</field>
-				<field Name="mraapi" Type="list">nil</field>
-				<field Name="AgingWidth" Type="string">""</field>
-				<field Name="stress_data_dir" Type="string">""</field>
-				<field Name="Frequency" Type="string">""</field>
-				<field Name="hspiceNativeMode" Type="string">"MOSRA"</field>
-				<field Name="fresh_data_dir" Type="string">""</field>
-				<field Name="tddb" Type="list">nil</field>
-				<field Name="circuit_report" Type="list">nil</field>
-				<field Name="RelStartTime" Type="string">""</field>
-				<field Name="aged_data_dir" Type="string">""</field>
-				<field Name="hSpiceRelUsercmdlineOption" Type="string">""</field>
-				<field Name="RelStartTimeUnit" Type="string">"sec"</field>
-				<field Name="stress_var_list" Type="list">nil</field>
-				<field Name="RelTotalTimeUnit" Type="string">"sec"</field>
-				<field Name="area_scaling" Type="string">""</field>
-				<field Name="hspiceEnableRelxpert" Type="list">nil</field>
-				<field Name="trelax" Type="string">""</field>
-				<field Name="RelTimeMode" Type="string">"Step"</field>
-				<field Name="hspiceEnableStress" Type="list">nil</field>
-				<field Name="DelOrLinValue" Type="string">""</field>
-				<field Name="RelTotalTime" Type="string">"3.1536e+08"</field>
-				<field Name="hspiceEnableAging" Type="list">nil</field>
-				<field Name="RelStep" Type="string">""</field>
 			</partition>
 		</component>
 		<component Name="simulationFiles" Type="skillTable">_simulationFiles
