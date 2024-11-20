@@ -64,6 +64,9 @@
 					<output>/I3/Qb
 						<evalType>point</evalType>
 					</output>
+					<output>/out_sa
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>

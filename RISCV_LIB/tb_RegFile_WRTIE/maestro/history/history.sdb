@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<setupdb version="7">history
+	<active>Active Setup</active>
+	<history>History
+		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
+			<timestamp>Nov 5 14:53:40 2024</timestamp>
+			<uuid>{3e1d6771-b41f-4a51-8f0e-fd147e037074}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.5
+			<timestamp>Nov 5 15:34:16 2024</timestamp>
+			<uuid>{61689b3b-2a9c-4967-a54e-aec29092b279}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.6
+			<timestamp>Nov 5 15:39:00 2024</timestamp>
+			<uuid>{e2e2aa83-0713-4dc7-ba03-b327bd6a325b}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.7
+			<timestamp>Nov 5 15:40:09 2024</timestamp>
+			<uuid>{2c8ca65c-0d50-49e5-b72e-0659a084fea3}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.8
+			<timestamp>Nov 5 15:40:53 2024</timestamp>
+			<uuid>{57533a95-ed88-4e8a-91d7-f83c23673c55}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.9
+			<timestamp>Nov 5 15:41:45 2024</timestamp>
+			<uuid>{2a731026-631a-4ccc-a23e-3c01377be1d5}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.10
+			<timestamp>Nov 5 15:43:19 2024</timestamp>
+			<uuid>{52d78c7c-2965-43d5-8ed2-9e84c72e9c00}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.11
+			<timestamp>Nov 5 15:47:01 2024</timestamp>
+			<uuid>{3f6e87ba-5e7d-4a69-bf80-767ad760023d}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.12
+			<timestamp>Nov 5 15:48:25 2024</timestamp>
+			<uuid>{ec9b1c58-c935-4a56-a86d-dbe2f19ae4ea}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.13
+			<timestamp>Nov 5 15:51:20 2024</timestamp>
+			<uuid>{04cff34e-3414-4ba1-baf5-95063247a764}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.14
+			<timestamp>Nov 5 15:51:26 2024</timestamp>
+			<uuid>{02a85916-d464-4074-8fa7-d5b874fab3ec}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.15
+			<timestamp>Nov 5 15:53:08 2024</timestamp>
+			<uuid>{0848e6a6-cfa6-4348-ae3a-158527aebc89}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_RegFile_WRTIE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+	</history>
+</setupdb>
