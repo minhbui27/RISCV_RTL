@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      ethanlee
+HostName                       ecellvm-02.engr.ucsb.edu
+ProcessIdentifier              17686
+ProcessCreationTime_UTC        1732571658
+ProcessCreationTime_Readable   Mon Nov 25 13:54:18 2024 PST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_immgen/schematic/sch.oa.cdslck
+TimeEditLocked                 Mon Nov 25 14:21:47 2024 PST
