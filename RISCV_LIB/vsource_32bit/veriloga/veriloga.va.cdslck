@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      cameronbarrett
+HostName                       ecellvm-20.engr.ucsb.edu
+ProcessIdentifier              11328
+ProcessCreationTime_UTC        1732732555
+ProcessCreationTime_Readable   Wed Nov 27 10:35:55 2024 PST
+AppIdentifier                  /ece/cadence/rhel8/IC231/tools/dfII/bin/64bit/layout
+OSType                         lnx86
+ReasonForPlacingEditLock       Text Edit
+FilePathUsedToEditLock         /fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/vsource_32bit/veriloga/veriloga.va
+TimeEditLocked                 Wed Nov 27 10:37:41 2024 PST
