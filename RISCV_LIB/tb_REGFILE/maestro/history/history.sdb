@@ -2,18 +2,6 @@
 <setupdb version="7">history
 	<active>Active Setup</active>
 	<history>History
-		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.0
-			<timestamp>Nov 13 17:28:25 2024</timestamp>
-			<uuid>{df8cb2f1-72c5-4ca0-94b4-0c0441a295e0}</uuid>
-			<locked>0</locked>
-			<mode>Single Run, Sweeps and Corners</mode>
-			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
-			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
-			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
-			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
-		</historyentry>
 		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.1
 			<timestamp>Nov 14 17:28:22 2024</timestamp>
 			<uuid>{ca9b72b1-12e3-4204-9a17-4b6a194e6d92}</uuid>
@@ -125,6 +113,18 @@
 		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
 			<timestamp>Nov 17 13:41:27 2024</timestamp>
 			<uuid>{3d235e07-d708-431a-bd68-9d6996280a93}</uuid>
+			<locked>0</locked>
+			<mode>Single Run, Sweeps and Corners</mode>
+			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/fs/student/ethanlee/cadence/simulation/ECE224_GITHUB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/ECE224_GITHUB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
+		</historyentry>
+		<historyentry assemblerOrExplorer="assembler" roOrView="view" runningOrFinished="finished">Interactive.10
+			<timestamp>Nov 29 09:30:35 2024</timestamp>
+			<uuid>{f474331d-b53e-42a5-9687-c1802e71a00e}</uuid>
 			<locked>0</locked>
 			<mode>Single Run, Sweeps and Corners</mode>
 			<resultsname>/fs/student/ethanlee/ece224a/ncsu45/RISCV_RTL/RISCV_LIB/tb_REGFILE/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
