@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      minhbui
+HostName                       ecellvm-06.engr.ucsb.edu
+ProcessIdentifier              26479
+ProcessCreationTime_UTC        1733165065
+ProcessCreationTime_Readable   Mon Dec  2 10:44:25 2024 PST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/riscv_sc_core/symbol/symbol.oa.cdslck
+TimeEditLocked                 Mon Dec  2 10:58:57 2024 PST
