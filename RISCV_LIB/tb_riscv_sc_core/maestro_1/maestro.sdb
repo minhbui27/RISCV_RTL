@@ -81,6 +81,18 @@
 					<output>/buf_en
 						<evalType>point</evalType>
 					</output>
+					<output>/imem_wr_buf
+						<evalType>point</evalType>
+					</output>
+					<output>/pc_buf&lt;0:4&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/imem_addr_en_buf
+						<evalType>point</evalType>
+					</output>
+					<output>/imem_pchb_buf
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>
