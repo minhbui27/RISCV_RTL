@@ -1,6 +1,6 @@
 Starting Single Run, Sweeps and Corners...
 
-Current time: Tue Dec  3 11:35:50 2024 
+Current time: Tue Dec  3 12:26:06 2024 
 Best design point: 1
 Design specs: 
 	RISCV_LIB_tb_riscv_sc_core_1	corner	Nominal - 
@@ -10,4 +10,4 @@ ExplorerRun.0
 Number of points completed: 1
 Number of simulation errors: 0
 ExplorerRun.0 completed. 
-Current time: Tue Dec  3 11:42:00 2024 
+Current time: Tue Dec  3 12:33:08 2024 

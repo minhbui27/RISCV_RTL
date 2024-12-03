@@ -75,6 +75,12 @@
 					<output>/I6/inst&lt;0:31&gt;
 						<evalType>point</evalType>
 					</output>
+					<output>/rst
+						<evalType>point</evalType>
+					</output>
+					<output>/buf_en
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>

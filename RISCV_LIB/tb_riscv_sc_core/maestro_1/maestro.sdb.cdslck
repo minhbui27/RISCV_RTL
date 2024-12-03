@@ -4,13 +4,13 @@
 # Information about current Edit Lock Owner.
 #
 LockStakeVersion               1.1
-LoginName                      cameronbarrett
-HostName                       ecellvm-13.engr.ucsb.edu
-ProcessIdentifier              16987
-ProcessCreationTime_UTC        1733247841
-ProcessCreationTime_Readable   Tue Dec  3 09:44:01 2024 PST
+LoginName                      minhbui
+HostName                       ecellvm-06.engr.ucsb.edu
+ProcessIdentifier              19388
+ProcessCreationTime_UTC        1733256782
+ProcessCreationTime_Readable   Tue Dec  3 12:13:02 2024 PST
 AppIdentifier                  /ece/cadence/rhel8/IC231/tools/dfII/bin/64bit/layout
 OSType                         lnx86
 ReasonForPlacingEditLock       
-FilePathUsedToEditLock         /fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/maestro_1/maestro.sdb
-TimeEditLocked                 Tue Dec  3 10:09:46 2024 PST
+FilePathUsedToEditLock         /fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/maestro_1/maestro.sdb
+TimeEditLocked                 Tue Dec  3 12:14:49 2024 PST
