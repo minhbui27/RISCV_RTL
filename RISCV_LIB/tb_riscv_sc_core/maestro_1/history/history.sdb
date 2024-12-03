@@ -3,15 +3,15 @@
 	<active>Active Setup</active>
 	<history>History
 		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
-			<timestamp>Dec 2 15:51:01 2024</timestamp>
-			<uuid>{c5b6cd01-875c-4c71-97f4-ceeea5b5f598}</uuid>
+			<timestamp>Dec 3 11:35:50 2024</timestamp>
+			<uuid>{ccd9e10e-21fc-4fdd-93cc-7b610f8cc342}</uuid>
 			<locked>0</locked>
 			<mode>Single Run, Sweeps and Corners</mode>
-			<resultsname>/fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<resultsname>/fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
-			<runlog>/fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlog>/fs/student/cameronbarrett/ece224a/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME.log</runlog>
 			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
-			<psfdir>/fs/student/minhbui/simulation/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<psfdir>/fs/student/cameronbarrett/simulation/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME</psfdir>
 			<simdir>$AXL_PROJECT_DIR/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME</simdir>
 		</historyentry>
 	</history>
