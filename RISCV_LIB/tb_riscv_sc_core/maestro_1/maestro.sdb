@@ -105,6 +105,75 @@
 					<output>/I6/sc_imem_addr_en
 						<evalType>point</evalType>
 					</output>
+					<output>/I6/alu_b
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/alu_a
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/alu_out&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/rs1
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/rs2
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/inst&lt;15:19&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/inst&lt;20:24&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/dmem_wr
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/reg_addr_en
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/reg_sa_en
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/reg_pchb
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/dmem_addr_en
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/dmem_pchb
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/alu_op&lt;0:3&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/reg_wr
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/wb_data&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/pc_p4&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/net3&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/rs1&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/rs2&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/alu_b&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/alu_a&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/immo&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>
