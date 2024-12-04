@@ -45,28 +45,10 @@
 					<output>/vdd
 						<evalType>point</evalType>
 					</output>
-					<output>/imem_wr
-						<evalType>point</evalType>
-					</output>
-					<output>/imem_addr_en
-						<evalType>point</evalType>
-					</output>
-					<output>/wr_data&lt;0:31&gt;
-						<evalType>point</evalType>
-					</output>
-					<output>/pc&lt;0:4&gt;
-						<evalType>point</evalType>
-					</output>
-					<output>/I6/I2/WL&lt;0:31&gt;
-						<evalType>point</evalType>
-					</output>
 					<output>/I6/I2/BL&lt;0:31&gt;
 						<evalType>point</evalType>
 					</output>
 					<output>/immem_pchb
-						<evalType>point</evalType>
-					</output>
-					<output>/imem_pchb
 						<evalType>point</evalType>
 					</output>
 					<output>/I6/I2/I0/I0/I0/I0/Q
@@ -75,22 +57,52 @@
 					<output>/I6/inst&lt;0:31&gt;
 						<evalType>point</evalType>
 					</output>
+					<output>"/u"
+						<evalType>point</evalType>
+					</output>
+					<output>/u
+						<evalType>point</evalType>
+					</output>
 					<output>/rst
 						<evalType>point</evalType>
 					</output>
-					<output>/buf_en
+					<output>/bootload
 						<evalType>point</evalType>
 					</output>
-					<output>/imem_wr_buf
+					<output>/I6/pc&lt;0:4&gt;
 						<evalType>point</evalType>
 					</output>
-					<output>/pc_buf&lt;0:4&gt;
+					<output>/I6/imem_pchb
 						<evalType>point</evalType>
 					</output>
-					<output>/imem_addr_en_buf
+					<output>/bl_imem_wr
 						<evalType>point</evalType>
 					</output>
-					<output>/imem_pchb_buf
+					<output>/I6/imem_addr_en
+						<evalType>point</evalType>
+					</output>
+					<output>/wr_data&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/sc_pc&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I2/BLb&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I2/WL&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/clk
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/imem_sa_en
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/sc_imem_pchb
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/sc_imem_addr_en
 						<evalType>point</evalType>
 					</output>
 				</outputs>
