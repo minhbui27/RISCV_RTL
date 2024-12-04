@@ -174,6 +174,54 @@
 					<output>/I6/immo&lt;0:31&gt;
 						<evalType>point</evalType>
 					</output>
+					<output>/I6/sel_wb&lt;0:1&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I3/I4/BL1&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I3/I4/BL1B&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I3/I4/net4&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I3/I4/BL2&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I3/I4/BL2B&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I9/BL&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I9/BLb&lt;0:31&gt;
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I11/S_type
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I11/R_type
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I11/J_type
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I11/I_load_type
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I11/I_arith_type
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/I11/B_type
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/net45
+						<evalType>point</evalType>
+					</output>
+					<output>/I6/br_en
+						<evalType>point</evalType>
+					</output>
 				</outputs>
 			</test>
 		</tests>

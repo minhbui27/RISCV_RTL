@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      minhbui
 HostName                       ecellvm-06.engr.ucsb.edu
-ProcessIdentifier              108673
-ProcessCreationTime_UTC        1733302640
-ProcessCreationTime_Readable   Wed Dec  4 00:57:20 2024 PST
+ProcessIdentifier              11792
+ProcessCreationTime_UTC        1733335288
+ProcessCreationTime_Readable   Wed Dec  4 10:01:28 2024 PST
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/riscv_sc_core/schematic/sch.oa.cdslck
-TimeEditLocked                 Wed Dec  4 01:02:38 2024 PST
+FilePathUsedToEditLock         /fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/schematic/sch.oa.cdslck.dirlck
+TimeEditLocked                 Wed Dec  4 10:11:38 2024 PST
