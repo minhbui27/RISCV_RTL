@@ -2,9 +2,9 @@
 <setupdb version="7">history
 	<active>Active Setup</active>
 	<history>History
-		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
-			<timestamp>Dec 3 16:47:06 2024</timestamp>
-			<uuid>{bb5e44c0-dc9e-4430-9874-1dcf2cf0f02c}</uuid>
+		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="running">ExplorerRun.0
+			<timestamp>Dec 3 20:18:38 2024</timestamp>
+			<uuid>{905c436d-4fa0-4fb9-8ffe-a0da4fb56705}</uuid>
 			<locked>0</locked>
 			<mode>Single Run, Sweeps and Corners</mode>
 			<resultsname>/fs/student/minhbui/grad/RISCV_RTL/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>

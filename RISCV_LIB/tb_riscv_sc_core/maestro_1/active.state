@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<statedb ICVersion="IC23.1-64b.ISR7.27" modifiedTime="12/03/2024 15:59:56" version="5">active
+<statedb ICVersion="IC23.1-64b.ISR7.27" modifiedTime="12/03/2024 20:10:53" version="5">active
 	<Test Name="RISCV_LIB_tb_riscv_sc_core_1">
 		<component Name="adeInfo" Type="skillTable">adeinfo
 			<field Name="projectDir" Type="string">"/fs/student/minhbui/simulation/RISCV_LIB/tb_riscv_sc_core/maestro_1/results/maestro/.tmpADEDir_minhbui/RISCV_LIB_tb_riscv_sc_core_1/simulation"</field>
@@ -20,7 +20,7 @@
 						<field Name="uic" Type="list">nil</field>
 						<field Name="DELMAX" Type="string">""</field>
 						<field Name="step" Type="string">"1n"</field>
-						<field Name="stop" Type="string">"40n"</field>
+						<field Name="stop" Type="string">"85n"</field>
 						<field Name="start" Type="string">"0"</field>
 						<field Name="enable" Type="list">(t)</field>
 					</partition>
